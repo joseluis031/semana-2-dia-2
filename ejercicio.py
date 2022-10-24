@@ -13,3 +13,18 @@ class Soldier:
         self.health = self.health-self.damage
         
 
+class Viking(Soldier):
+    def __init__(self,name, health, strength):
+        super().__init__(strength,health)
+        self.name = name
+
+    def receiveDamage_method(self,damage):
+        self.health = self.health-self.damage
+        
+        if self.health > 0:
+            print(self.name," has received",self.damage,"points of damage")
+        else:
+            print(self.name,"has died in act of combat")
+            
+    def battleCry_method():
+        return "Odin Owns You All!"
