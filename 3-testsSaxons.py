@@ -7,7 +7,7 @@ class TestSaxon(unittest.TestCase):
 
     @classmethod
     def setUp(cls):
-        cls.health = 60
+        cls.health = 25
         cls.strength = 25
         cls.saxon = Saxon(cls.health, cls.strength)
 

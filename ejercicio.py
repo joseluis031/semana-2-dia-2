@@ -2,19 +2,22 @@
 from random import choice
 
 
-class Soldier():
+class Soldier:
     def __init__(self, health, strength):
         self.health = health
         self.strength = strength
     
-    def attact(self):
+    def attack(self):
         return self.strength
     
     def receiveDamage(self,damage):
         self.damage = damage
         
         self.health = self.health-self.damage
-        
+        if self.health < 0:
+            self.health = 0
+        else:
+            pass
 
 class Viking(Soldier):
     def __init__(self,name, health, strength):
@@ -27,9 +30,9 @@ class Viking(Soldier):
         self.health = self.health-self.damage
         
         if self.health > 0:
-            return self.name," has received",self.damage,"points of damage"
+            return "{} has received {} points of damage".format(self.name, damage)
         else:
-            return self.name,"has died in act of combat"
+            return "{} has died in combat".format(self.name)
             
     def battleCry(self):
         return "Odin Owns You All!"
@@ -44,9 +47,9 @@ class Saxon(Soldier):
         self.health = self.health-self.damage
         
         if self.health > 0:
-            return "A Saxon has received",self.damage,"points of damage"
+            return "A Saxon has received {} points of damage".format(damage)
         else:
-            return "A Saxon has died in act of combat"
+            return "A Saxon has died in combat"
             
             
 class War:
@@ -84,8 +87,8 @@ class War:
     
     def showStatus(self):
         if self.saxonArmy == []:
-            return "Viking have won the war of the century"
+            return "Vikings have won the war of the century!"
         elif self.vikingArmy == []:
             return "Saxon have fought for their lives and survive another day..."
         else:
-            return "Vikings and Saxons are still in the thick of battle"
+            return "Vikings and Saxons are still in the thick of battle."

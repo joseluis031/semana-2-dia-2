@@ -1,5 +1,4 @@
-from tkinter import W
-from ejercicio import (Soldier,Saxon,Viking,War)
+from ejercicio import (Saxon,Viking,War)
 
 
 def lanz():
