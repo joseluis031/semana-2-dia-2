@@ -1,5 +1,5 @@
 # Soldier
-from secrets import choice
+from random import choice
 
 
 class Soldier:
