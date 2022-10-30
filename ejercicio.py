@@ -43,3 +43,12 @@ class Saxon(Soldier):
             print("A Saxon has received",self.damage,"points of damage")
         else:
             print("A Saxon has died in act of combat")
+            
+            
+class War():
+    def __init__(self):
+        self.vikingArmy = []
+        self.saxonArmy = []
+        
+    def addViking(self):
+        
