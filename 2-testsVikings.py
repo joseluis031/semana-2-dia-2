@@ -9,7 +9,7 @@ class TestViking(unittest.TestCase):
     def setUp(cls):
         cls.name = 'Harald'
         cls.strength = 150
-        cls.health = 150
+        cls.health = 300
         cls.viking = Viking(cls.name, cls.health, cls.strength)
 
     def testShouldReciveThreeParams(self):

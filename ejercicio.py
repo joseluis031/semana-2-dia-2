@@ -22,7 +22,7 @@ class Soldier:
 class Viking(Soldier):
     def __init__(self,name, health, strength):
         self.name = name
-        super().__init__(strength,health)
+        super().__init__(health,strength)
 
 
     def receiveDamage(self,damage):
@@ -32,7 +32,7 @@ class Viking(Soldier):
         if self.health > 0:
             return "{} has received {} points of damage".format(self.name, damage)
         else:
-            return "{} has died in combat".format(self.name)
+            return "{} has died in act of combat".format(self.name)
             
     def battleCry(self):
         return "Odin Owns You All!"
@@ -40,7 +40,7 @@ class Viking(Soldier):
 
 class Saxon(Soldier):
     def __init__(self, health, strength):
-        super().__init__(strength,health)
+        super().__init__(health,strength)
         
     def receiveDamage(self,damage):
         self.damage = damage
@@ -89,6 +89,6 @@ class War:
         if self.saxonArmy == []:
             return "Vikings have won the war of the century!"
         elif self.vikingArmy == []:
-            return "Saxon have fought for their lives and survive another day..."
+            return "Saxons have fought for their lives and survive another day..."
         else:
             return "Vikings and Saxons are still in the thick of battle."
